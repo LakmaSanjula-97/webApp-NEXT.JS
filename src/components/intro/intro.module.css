@@ -1,0 +1,122 @@
+/* Base styles */
+.container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  overflow: hidden;
+  padding-top: 20px;
+  position: relative;
+}
+
+.card {
+  flex: 1;
+  padding: 100px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.title {
+  font-size: 50px;
+  margin: 0;
+}
+
+.appName {
+  color: #f6be47;
+}
+
+.introImageContainer {
+  position: relative;
+  width: 700px;
+  height: 600px;
+}
+
+.desc {
+  font-size: 20px;
+  margin: 0;
+}
+
+.button {
+  border: none;
+  background-color: #f6be47;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  cursor: pointer;
+  animation: button 1s ease infinite alternate;
+}
+
+/* Responsive styles */
+
+/* Large screens (desktops) */
+@media screen and (max-width: 1200px) {
+  .card {
+    padding: 80px;
+  }
+  .introImageContainer {
+    width: 600px;
+    height: 500px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 992px) {
+  .card {
+    padding: 60px;
+  }
+  .introImageContainer {
+    width: 500px;
+    height: 400px;
+  }
+  .title {
+    font-size: 40px;
+  }
+}
+
+/* Small screens (large phones) */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+  }
+  .introImageContainer {
+    width: 400px;
+    height: 300px;
+  }
+  .title {
+    font-size: 35px;
+  }
+  .desc {
+    font-size: 18px;
+  }
+}
+
+/* Extra small screens (phones) */
+@media screen and (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .card {
+    padding: 30px;
+  }
+  .introImageContainer {
+    width: 300px;
+    height: 200px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .desc {
+    display: none;
+  }
+  .button {
+    width: 100%;
+    padding: 15px;
+  }
+}
